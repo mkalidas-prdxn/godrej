@@ -1,0 +1,777 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   2. Body
+   ========================================================================== */
+body {
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 95.7%;
+  margin: auto;
+}
+
+ul { list-style-type: none; }
+a { text-decoration: none; }
+
+/* ==========================================================================
+   3. Header
+   ========================================================================== */
+header {
+  padding: 1.04% 0px 1.93%;
+  border-bottom: 2px solid #e2e2e2;
+}
+
+header h1 {
+  width: 12.56%;
+  display: inline-block;
+}
+
+header h1 img { width: 100%; }
+header nav { width: auto; }
+header nav, ul, li { display: inline-block; }
+
+header nav a {
+  color: #616161;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  text-transform: uppercase;
+}
+
+header nav .active { color: #3082b7;}
+
+header nav ul a::before, nav .dropdown::before {
+  content: "";
+  width: 2px;
+  height: 19.5px;
+  margin: auto 20px auto 21px;
+  display: inline-block;
+  background-color: #e2e2e2;
+  vertical-align: middle;
+}
+
+header .call {
+  min-width: 19.52%;
+  float: right;
+}
+
+header .call li {
+  display: inline;
+  vertical-align: middle;
+}
+
+header li [title*="godrej"] img { width: 67%; }
+
+header li [title*="call"]::after {
+  content: "";
+  width: 2px;
+  height: 34px;
+  margin: 0px 19px;
+  display: inline-block;
+  background-color: #e2e2e2;
+  vertical-align: middle;
+}
+
+header .call img { width: 14%;}
+
+nav .dropdown { display: none; }
+.hamburgerMenu { display: none; }
+
+.hamburger {
+  height: 10px;
+  width: 50px;
+  margin: 5px;
+  position: relative;
+  display: block;
+}
+
+.line {
+  height: 2px;
+  width: 30px;
+  display: block;
+  position: absolute;
+  left: 30%;
+  background-color: #000;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.line1 { top: 10%; }
+.line2 { top: 50%; }
+.line3 { top: 90%; }
+
+.active .line1 {
+  top: 40%;
+  -webkit-transform: rotateZ(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotateZ(45deg);
+}
+
+.active .line2 { opacity: 0;}
+
+.active .line3 {
+  top: 40%;
+  -webkit-transform: rotateZ(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+/* ==========================================================================
+   4. Container
+   ========================================================================== */
+   /* 4.1. Residence
+   ========================================================================== */
+.residences .wrapper {
+  width: 100%;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.residence {
+  width: 50.5%;
+  padding: 7.04% 7.41% 0px;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.residence h2 {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 45px;
+}
+
+.residence p {
+  margin: 5.19% auto;
+  color: #6b6a71;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+.residence p:first-of-type { margin-top: 2.49%; }
+
+.residences figure {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.residences .wrapper img { width: 100%; }
+
+
+/* 4.2 floorplan
+   ========================================================================== */
+.floorplans .wrapper { width: 100%; }
+
+.floorplans h2 {
+  margin: 3.33% 7.03% auto;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 47px;
+}
+
+.floorplans p {
+  margin: 0.89% 7.03%;
+  color: #6b6a71;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.slick ul { width: 100%; }
+
+.action li {
+  margin: 1.85% 2% 2% 0px;
+  letter-spacing: 1px;
+}
+.action li:first-of-type { margin-left: 7.03%; }
+
+.slick a {
+  color: #4a4a4a;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.slick .active-plan { color: #3da5f9; }
+
+.slider-for figure {
+  width: 94.5%;
+  margin: auto;
+}
+
+.slider-for img { width: 100%;}
+
+.slider-nav,
+.slider-nav-modal {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-height: 115px;
+  background-color: #7e7e7e;
+}
+
+.slider-nav-modal {
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+}
+
+.slider-nav li,
+.slider-nav-modal li {
+  padding: 0.37% 0px;
+  margin: 0px 100px;
+  color: #e6e8d9;
+  font-size: 19.5px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.slick-prev {
+  width: auto;
+  height: auto;
+  left: 1.49%;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.a-right {
+  width: auto;
+  height: auto;
+  right: 1.55%;
+}
+
+.slick-slide:focus,a { outline: none; }
+
+/* 4.3 quote
+   ========================================================================== */
+.quote h3 {
+  padding: 7.78% 14.81% 4.3%;
+  color: #404040;
+  font-size: min(3.13vw, 42.6px);
+  font-style: italic;
+}
+
+.another {
+  position: relative;
+}
+
+.slider-nav-modal {
+  position: absolute;
+  bottom: 0px;
+  opacity: 0.7;
+  background-color: #3f3e3e;
+}
+
+.another figure {
+  width: 100%;
+}
+
+.another figure img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.modal {
+  width: 100%; 
+  height: 100%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 1%;
+  left: 0;
+  top: 0;
+  overflow: auto; 
+  background-color: #000;
+  background-color: #00000066;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 10px;
+  border: 1px solid #888;
+  width: 76%;
+}
+
+video { width: 100%; }
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   5. Footer
+   ========================================================================== */
+footer {
+  padding: 5.92% 8.15% 1.93% 13.33%;
+  background-color: #eeeeee;
+}
+
+footer .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+footer div { margin-right: 5px; }
+footer ul, footer li { display: block; }
+
+footer li {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+}
+
+footer h4 {
+  margin-bottom: 13px;
+  color: #1a0c04;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+}
+
+footer .mail { margin-bottom: 10px; }
+
+.mail a { color: #1a0c04; }
+
+footer ul .number {
+  margin-bottom: 35px;
+  color: #1a0c04;
+  letter-spacing: 0px;
+}
+
+.social img {
+  width: 40px;
+  margin-right: 20px;
+  margin-top: -8px;
+}
+
+.colour a { color: #439ee9;}
+
+/* ==========================================================================
+   6. Media querries
+   ========================================================================== */
+
+@media screen and (max-width: 1280px) {
+  nav li [title*="master"] {
+    display: none;
+  }
+  nav li [title*="location"] {
+    display: none;
+  }
+  nav li [title*="gallery"] {
+    display: none;
+  }
+  nav li [title*="contact"] {
+    display: none;
+  }
+  nav .dropdown {
+    display: inline-block;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #00000033;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .residences .wrapper img {
+    width: auto;
+    object-fit: fill;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .residence {
+    width: 100%;
+  }
+  .residences figure {
+    width: 100%;
+    display: flex;
+  }
+  .residences img {
+    flex-grow: 1;
+  }
+  footer .wrapper {
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .dropdown {
+    display: none;
+  }
+  header nav a,
+  .call a {
+    display: none;
+  }
+  header h1 {
+    width: 130px;
+    display: inline-block;
+  }
+  header {
+    padding: 1.04% 0px 0%;
+  }
+  .hamburgerMenu {
+    display: inline-block;
+    text-align: center;
+  }
+  .hamburger {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav {
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+  }
+
+  .topnav .hamMenu {
+    display: none;
+    transition: all 2s;
+  }
+
+  .topnav a {
+    color: #000;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+
+  header .active {
+    color: #3082b7;
+  }
+  .residences .wrapper img {
+    width: 0;
+    object-fit: fill;
+  }
+  .slick-prev {
+    width: 12px;
+  }
+  .a-right {
+    width: 12px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  body .container h2 {
+    font-size: 25px;
+  }
+  body .container h3 {
+    font-size: 20px;
+  }
+  footer li,
+  footer a {
+    font-size: 10px;
+  }
+  body .container h4 {
+    font-size: 14px;
+  }
+  body .container p,
+  .slider-nav-modal li,
+  .slider-nav li,
+  .slick a {
+    font-size: 12px;
+  }
+
+  .slick-prev {
+    width: 10px;
+  }
+  .a-right {
+    width: 10px;
+  }
+}
